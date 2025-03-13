@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelShare - Assistance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/assistance.js" defer></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gradient-border {
+            position: relative;
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                      linear-gradient(45deg, #6366f1, #a855f7) border-box;
+            border-radius: 0.75rem;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-lg transition-all duration-300" style="box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-300">
+                            <i class="fas fa-globe text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold gradient-text">TravelShare</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">
+                        <i class="fas fa-home mr-2"></i>Accueil
+                    </a>
+                    <a href="profile.html" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">
+                        <i class="fas fa-user mr-2"></i>Profil
+                    </a>
+                    <a href="assistance.html" class="text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">
+                        <i class="fas fa-question-circle mr-2"></i>Assistance
+                    </a>
+                    <a href="auth.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Connexion
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Assistant Header -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold gradient-text mb-4">Assistant Administratif IA</h1>
+                <p class="text-gray-600">Votre assistant personnel pour toutes vos démarches administratives à l'international</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Left Column - Quick Actions -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- Quick Actions Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <button class="p-6 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-all text-center">
+                            <i class="fas fa-passport text-4xl text-indigo-600 mb-4"></i>
+                            <p class="font-medium">Demande de Visa</p>
+                            <p class="text-sm text-gray-600 mt-2">Assistance complète pour vos visas</p>
+                        </button>
+                        <button class="p-6 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-all text-center">
+                            <i class="fas fa-file-contract text-4xl text-indigo-600 mb-4"></i>
+                            <p class="font-medium">Documents</p>
+                            <p class="text-sm text-gray-600 mt-2">Génération de documents</p>
+                        </button>
+                        <button class="p-6 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-all text-center">
+                            <i class="fas fa-home text-4xl text-indigo-600 mb-4"></i>
+                            <p class="font-medium">Logement</p>
+                            <p class="text-sm text-gray-600 mt-2">Aide à la recherche</p>
+                        </button>
+                        <button class="p-6 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-all text-center">
+                            <i class="fas fa-university text-4xl text-indigo-600 mb-4"></i>
+                            <p class="font-medium">Université</p>
+                            <p class="text-sm text-gray-600 mt-2">Inscription & démarches</p>
+                        </button>
+                        <button class="p-6 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-all text-center">
+                            <i class="fas fa-plane text-4xl text-indigo-600 mb-4"></i>
+                            <p class="font-medium">Transport</p>
+                            <p class="text-sm text-gray-600 mt-2">Réservations & billets</p>
+                        </button>
+                        <button class="p-6 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition-all text-center">
+                            <i class="fas fa-shield-alt text-4xl text-indigo-600 mb-4"></i>
+                            <p class="font-medium">Assurance</p>
+                            <p class="text-sm text-gray-600 mt-2">Couverture santé</p>
+                        </button>
+                    </div>
+
+                    <!-- Chat Interface -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg gradient-border">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-xl font-semibold gradient-text">Assistant IA</h2>
+                            <span class="bg-gradient-to-r from-green-400 to-green-500 text-white px-3 py-1 rounded-full text-xs">En ligne</span>
+                        </div>
+                        <div class="h-96 overflow-y-auto mb-4 space-y-4" id="chat-messages">
+                            <!-- AI Message -->
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-sm text-gray-600 bg-gray-50 rounded-xl p-3">
+                                        Bonjour ! Je suis votre assistant administratif. Comment puis-je vous aider aujourd'hui ?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <input type="text" id="chat-input" placeholder="Posez votre question..." class="flex-1 px-4 py-2 rounded-xl border border-gray-200 focus:outline-none focus:border-indigo-500">
+                            <button id="send-message" class="p-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Features -->
+                <div class="space-y-6">
+                    <!-- Features List -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg gradient-border">
+                        <h2 class="text-xl font-semibold gradient-text mb-6">Fonctionnalités</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-globe text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">Multi-langues</h3>
+                                    <p class="text-sm text-gray-600">Assistance disponible en 12 langues</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-clock text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">24/7 Disponible</h3>
+                                    <p class="text-sm text-gray-600">Support continu à toute heure</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-file-alt text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">Documents Automatisés</h3>
+                                    <p class="text-sm text-gray-600">Génération instantanée de documents</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">Sécurisé</h3>
+                                    <p class="text-sm text-gray-600">Protection des données personnelles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg gradient-border">
+                        <h2 class="text-xl font-semibold gradient-text mb-6">Statistiques</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold gradient-text">98%</div>
+                                <p class="text-sm text-gray-600">Satisfaction</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold gradient-text">15k+</div>
+                                <p class="text-sm text-gray-600">Utilisateurs</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold gradient-text">45k</div>
+                                <p class="text-sm text-gray-600">Documents générés</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold gradient-text">24/7</div>
+                                <p class="text-sm text-gray-600">Disponibilité</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
